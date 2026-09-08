@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GV Vendas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">GV <span>Vendas</span></div>
+
+    <button class="cart-button" onclick="abrirCarrinho()">
+        🛒 Carrinho
+        <span id="contador">0</span>
+    </button>
+</header>
+
+<section class="hero">
+    <h1>Bem-vindo à GV Vendas</h1>
+
+    <p>
+        Encontre produtos incríveis da Shopee e Mercado Livre
+        em um só lugar.
+    </p>
+
+    <button onclick="document.getElementById('produtos').scrollIntoView()">
+        Ver produtos
+    </button>
+</section>
+
+<section class="pesquisa">
+    <input
+        type="text"
+        id="busca"
+        placeholder="🔎 Procurar produto..."
+        onkeyup="buscarProduto()"
+    >
+</section>
+
+<main>
+    <h2>🔥 Produtos em destaque</h2>
+
+    <div class="produtos" id="produtos">
+
+        <div class="produto" data-nome="fone bluetooth">
+            <img src="https://placehold.co/500x400?text=Fone+Bluetooth">
+
+            <h3>Fone Bluetooth</h3>
+
+            <p class="descricao">
+                Fone sem fio com excelente custo-benefício.
+            </p>
+
+            <strong>R$ 49,90</strong>
+
+            <button onclick="adicionarCarrinho('Fone Bluetooth', 49.90)">
+                Adicionar ao carrinho
+            </button>
+
+            <a
+                href="https://shopee.com.br/"
+                target="_blank"
+                class="comprar"
+            >
+                Ver produto
+            </a>
+        </div>
+
+
+        <div class="produto" data-nome="suporte celular">
+            <img src="https://placehold.co/500x400?text=Suporte+Celular">
+
+            <h3>Suporte para Celular</h3>
+
+            <p class="descricao">
+                Suporte prático para celular.
+            </p>
+
+            <strong>R$ 29,90</strong>
+
+            <button onclick="adicionarCarrinho('Suporte para Celular', 29.90)">
+                Adicionar ao carrinho
+            </button>
+
+            <a
+                href="https://www.mercadolivre.com.br/"
+                target="_blank"
+                class="comprar"
+            >
+                Ver produto
+            </a>
+        </div>
+
+
+        <div class="produto" data-nome="caixa de som bluetooth">
+            <img src="https://placehold.co/500x400?text=Caixa+de+Som">
+
+            <h3>Caixa de Som Bluetooth</h3>
+
+            <p class="descricao">
+                Caixa de som portátil para qualquer ocasião.
+            </p>
+
+            <strong>R$ 79,90</strong>
+
+            <button onclick="adicionarCarrinho('Caixa de Som Bluetooth', 79.90)">
+                Adicionar ao carrinho
+            </button>
+
+            <a
+                href="https://shopee.com.br/"
+                target="_blank"
+                class="comprar"
+            >
+                Ver produto
+            </a>
+        </div>
+
+
+        <div class="produto" data-nome="smartwatch">
+            <img src="https://placehold.co/500x400?text=Smartwatch">
+
+            <h3>Smartwatch</h3>
+
+            <p class="descricao">
+                Relógio inteligente moderno.
+            </p>
+
+            <strong>R$ 99,90</strong>
+
+            <button onclick="adicionarCarrinho('Smartwatch', 99.90)">
+                Adicionar ao carrinho
+            </button>
+
+            <a
+                href="https://www.mercadolivre.com.br/"
+                target="_blank"
+                class="comprar"
+            >
+                Ver produto
+            </a>
+        </div>
+
+    </div>
+</main>
+
+
+<div id="carrinho" class="carrinho">
+
+    <div class="carrinho-conteudo">
+
+        <button class="fechar" onclick="fecharCarrinho()">✕</button>
+
+        <h2>🛒 Seu carrinho</h2>
+
+        <div id="listaCarrinho"></div>
+
+        <h3>
+            Total:
+            <span id="total">R$ 0,00</span>
+        </h3>
+
+        <button class="whatsapp" onclick="finalizarPedido()">
+            📲 Finalizar pedido pelo WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <h3>GV Vendas</h3>
+
+    <p>
+        Produtos selecionados da Shopee e Mercado Livre.
+    </p>
+
+    <p>© 2026 GV Vendas</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
