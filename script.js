@@ -122,10 +122,10 @@ function finalizarPedido() {
       WHATSAPP DA SUA LOJA.
 
       Exemplo:
-      5585999999999
+      558898110865
     */
 
-    const numero = "5585999999999";
+    const numero = "5588981180378";
 
     const url =
         "https://wa.me/" + numero + "?text=" + mensagem;
